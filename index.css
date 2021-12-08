@@ -1,0 +1,113 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+body {
+    background: url(img/space.jpg); 
+    background-size: cover;   
+    height: 100vh;
+    font-family: 'New Tegomin', serif;
+}
+h1 {
+    font-size: 40px;
+}
+.container {
+    position: relative;
+    opacity: .7;
+    color: #03317a;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 35px;
+    min-width: 300px;
+    box-shadow: 2px 2px 20px orangered;
+}
+.bell {
+    font-size: 100px;
+}
+.material-icons-outlined {
+    padding-top: 5px;
+    margin: 0;
+    font-size: 30px;
+}
+
+button {
+    padding: 0.25em 0.5em;
+    border: none;
+    font-size: 1.2rem;
+    background-color: var(--dark-green);
+    color: var(--snow);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    transform: scale(1.02)
+}
+
+.pause-btn {
+    background-color: var(--gold);
+    color: var(--wine-red)
+}
+
+.stop-btn {
+    background-color: var(--wine-red);
+}
+
+/* ANIMATION */
+.animate-bell {
+    display: inline-block;
+    animation: bell .75s infinite alternate ease-in-out;
+}
+.animate-tree {
+    display: inline-block;
+    animation: tree .75s infinite alternate ease-in-out;
+}
+
+@keyframes bell {
+   0% {
+    transform: rotateZ(45deg);
+   
+  }
+  100%{
+    transform: rotateZ(-45deg);
+   
+  }
+}
+@keyframes tree {
+   0% {
+    transform: scale(1);
+   
+  }
+  100%{
+    transform: scale(2);
+   
+  }
+}
+
+
+.credits {
+    position: absolute;
+    bottom: -50px;
+    color: var(--snow);
+    font-size: 9px;
+}
